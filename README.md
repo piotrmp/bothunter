@@ -1,1 +1,32 @@
-# bothunter
+# BotHunter
+
+A Twitter bot detection solution for the [Bots & Gender Profiling](https://pan.webis.de/clef19/pan19-web/author-profiling.html) shared task organised at the [PAN workshop](https://pan.webis.de/) at [CLEF 2019](http://clef2019.clef-initiative.eu/) conference.
+
+The tool was developed within the [HOMADOS](https://homados.ipipan.waw.pl/) project at the [Institute of Computer Science](https://ipipan.waw.pl/), Polish Academy of Sciences. For the description of the approach and evaluation results, see the publication:
+
+Przybyła, P.: [Detecting bot accounts on Twitter by measuring message predictability. Notebook for PAN at CLEF.](<https://pan.webis.de/clef19/pan19-web/proceedings.html>) In: Crestani, F., Braschler, M., Savoy, J., Rauber, A., Müller, H., Losada, D., Heinatz, G., Cappellato, L., Ferro, N. (eds.) Proceedings of the Tenth International Conference of the CLEF Association (CLEF 2019). Springer.
+
+You can run the code producing results as described in the paper in the following way (replace 'en' with 'es' for Spanish):
+- for LASSO version:
+
+`java -jar ./BotHunter-1.6-jar-with-dependencies.jar GLM <input>/en <output> <workdir> ./R ./modelR en`
+- for BERT version
+
+`java -jar ./BotHunter-1.6-jar-with-dependencies.jar BERTpart <input>/en <output> <workdir> <bert-source> <bert-model>/en <venv> ./R ./modelR en`
+- for LASSO+BERT combination:
+
+`java -jar ./BotHunter-1.6-jar-with-dependencies.jar GLMBERTpart <input>/en <output> <workdir> <bert-source> <bert-model>/en <venv> ./R ./modelR en`
+
+This requires the following elements to be present:
+- a JAR file of BotHunter 1.6 compiled from the source available here (`BotHunter-1.6-jar-with-dependencies.jar`),
+- R source files available here (`R`),
+- R model files to be [downloaded separately](http://homados.ipipan.waw.pl/bothunter-data/modelR.zip) (`modelR`).
+
+Additionally, the BERT-powered variants require:
+- BERT [source code](https://github.com/google-research/bert), including `run_classifier.py` (`<bert-source>`),
+- BERT models tuned for the task to be [downloaded separately](http://homados.ipipan.waw.pl/bothunter-data/bert-model.zip) (`<bert-model>`),
+- a virtual environment configured with Python and TensorFlow to run BERT (`<venv>`).
+
+If you want to train the approach on a different dataset, the necessary procedures for preparing data (`BotHunter`->`Main.java`) and building ML models (`R`->`TIRA_build.R`) are available here, too.
+
+
