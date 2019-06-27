@@ -6,7 +6,7 @@ The tool was developed within the [HOMADOS](https://homados.ipipan.waw.pl/) proj
 
 Przybyła, P.: [Detecting bot accounts on Twitter by measuring message predictability. Notebook for PAN at CLEF.](<https://pan.webis.de/clef19/pan19-web/proceedings.html>) In: Crestani, F., Braschler, M., Savoy, J., Rauber, A., Müller, H., Losada, D., Heinatz, G., Cappellato, L., Ferro, N. (eds.) Proceedings of the Tenth International Conference of the CLEF Association (CLEF 2019). Springer.
 
-You can run the code producing results as described in the paper in the following way (replace 'en' with 'es' for Spanish):
+You can run the code producing results as described in the paper in the following way (use '`en`' for English or '`es`' for Spanish):
 - for LASSO version:
 
 `java -jar ./BotHunter-1.6-jar-with-dependencies.jar GLM <input>/en <output> <workdir> ./R ./modelR en`
