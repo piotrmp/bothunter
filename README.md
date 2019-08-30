@@ -4,7 +4,7 @@ A Twitter bot detection solution for the [Bots & Gender Profiling](https://pan.w
 
 The tool was developed within the [HOMADOS](https://homados.ipipan.waw.pl/) project at the [Institute of Computer Science](https://ipipan.waw.pl/), Polish Academy of Sciences. For the description of the approach and evaluation results, see the publication:
 
-Przybyła, P.: [Detecting Bot Accounts on Twitter by Measuring Message Predictability - Notebook for PAN at CLEF.](<https://home.ipipan.waw.pl/p.przybyla/bib/detecting.pdf>) In: Cappellato, L., Ferro, N., Losada, D. E., and Müller, H. (eds.) CLEF 2019 Working Notes. Springer.
+Przybyła, P.: [Detecting Bot Accounts on Twitter by Measuring Message Predictability - Notebook for PAN at CLEF.](<http://ceur-ws.org/Vol-2380/paper_58.pdf>) In: Cappellato, L., Ferro, N., Losada, D. E., and Müller, H. (eds.) CLEF 2019 Working Notes. Springer.
 
 You can run the code producing results as described in the paper in the following way (set `<lang>` to `en` for English or `es` for Spanish):
 - for LASSO version:
